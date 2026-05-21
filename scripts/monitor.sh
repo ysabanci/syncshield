@@ -29,3 +29,5 @@ inotifywait -m -r -e create,modify,delete,moved_to "${WATCH_DIR}" --format '%T %
         echo "[MONITOR][${NODE_NAME}] Silindi: ${FILEPATH}"
     fi
 done
+# agdaki degisiklikleri ve ip'leri takip eden script git add scripts/monitor.shgit commit -m IP takip ve ağ izleme mekanizması eklendi
+# agdaki degisiklikleri ve ip'leri takip eden script

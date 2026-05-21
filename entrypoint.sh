@@ -27,3 +27,4 @@ echo "============================================"
 
 echo "[$(date '+%Y-%m-%d %H:%M:%S')] Honeypot servisi başlatılıyor (ön plan)..."
 exec python3 /opt/syncshield/honeypot.py
+# konteyner ilk acildiginda ag ayarlarini yapan script

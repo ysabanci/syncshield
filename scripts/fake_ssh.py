@@ -56,3 +56,5 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+# sahte ssh baglantilarini karsilayan dinleyici git add scripts/fake_ssh.pygit commit -m Sahte ssh baglantı kodlari eklendi
+# sahte ssh baglantilarini karsilayan dinleyici

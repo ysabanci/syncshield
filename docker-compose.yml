@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  node_a:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: syncshield_node_a
+    hostname: node_a
+    cap_add:
+      - NET_ADMIN
+    ports:
+      - "2222:2222"
+    volumes:
+      - ./shared_data:/var/sync_intel
+    networks:
+      - threat_net
+    environment:
+      - NODE_NAME=node_a
+    stdin_open: true
+    tty: true
+
+  node_b:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: syncshield_node_b
+    hostname: node_b
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./shared_data:/var/sync_intel
+    networks:
+      - threat_net
+    environment:
+      - NODE_NAME=node_b
+    stdin_open: true
+    tty: true
+
+  node_c:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: syncshield_node_c
+    hostname: node_c
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ./shared_data:/var/sync_intel
+    networks:
+      - threat_net
+    environment:
+      - NODE_NAME=node_c
+    stdin_open: true
+    tty: true
+
+networks:
+  threat_net:
+    driver: bridge

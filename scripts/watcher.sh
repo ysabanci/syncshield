@@ -104,3 +104,4 @@ inotifywait -m -e close_write "$BANNED_FILE" --format '%e' 2>/dev/null | while r
     ip=$(echo "$last_line" | awk '{print $NF}')
     block_ip "$ip"
 done
+# yakalanan ip'leri isleyip banlayan script
